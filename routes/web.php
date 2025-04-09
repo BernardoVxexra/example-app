@@ -45,3 +45,5 @@ Route::post('/editar-produto/{id}',function (Request $request, $id){
 
    echo "Produto editado com sucesso";
 });
+
+
