@@ -21,7 +21,7 @@
     <label for="lblObservacao">Observacao:</label>
     <input type="text" name="observacao" value="{{ $produto->observacao }}">
       <br><br>
-
       <button>Cadastrar</button>
+    </form>
 </body>
 </html>
