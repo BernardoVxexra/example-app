@@ -43,7 +43,12 @@ Route::post('/editar-produto/{id}',function (Request $request, $id){
      'observacao' =>$request->observacao
    ]);
 
-   echo "Produto editado com sucesso";
+   echo "Contato editado com sucesso";
 });
 
+Route::get('/excluir-produto/{id}', function($id){
+  $produto = Produto::find($id);
+  $produto->delete();
 
+  echo "Contato excluido com sucesso";
+});
