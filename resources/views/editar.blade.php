@@ -44,10 +44,10 @@
       </div>
       <div class="mb-3">
         <label for="observacao" class="form-label">Observações</label>
-        <textarea class="form-control" id="observacao" name="observacao" rows="3"
-        value="{{ $produto->observacao }}" required></textarea>
+        <textarea class="form-control" id="observacao" name="observacao" rows="3" value="{{ $produto->observacao }}" disabled></textarea>
+
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" class="btn btn-primary">Editar</button>
     </form>
   </div>
 
