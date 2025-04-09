@@ -55,6 +55,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Scripts do Bootstrap Toggle (para o switch) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap5-toggle/js/bootstrap5-toggle.min.js"></script>
+  <script>
+    // Máscara para o campo de telefone
+    document.getElementById('telefone').addEventListener('input', function (e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length <= 10) {
+        e.target.value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+      } else {
+        e.target.value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+      }
+    });
+  </script>
 </body>
 
 </html>
