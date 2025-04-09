@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Contatos</h1>
-    <form action="/listar-produto" method="POST">
+    
      @csrf 
     <label for="lblNome">Nome:</label>
     <input type="text" name="nome" value="{{ $produto->nome }}">
@@ -21,6 +21,6 @@
     <label for="lblObservacao">Observacao:</label>
     <input type="text" name="observacao" value="{{ $produto->observacao }}">
       <br><br>
-    </form>
+    
 </body>
 </html>

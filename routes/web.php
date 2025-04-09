@@ -23,7 +23,7 @@ Route::post('/cadastrar-produto', function(Request $request){
     echo "Cadastro feito com sucesso:";
 });
 
-Route::get('/listar-produto/(id)', function($id){
+Route::get('/listar-produto/{id}', function($id){
   $produto = Produto::find($id);
   return view('listar', ['produto' => $produto]);
 });

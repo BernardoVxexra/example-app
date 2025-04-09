@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Contatos</h1>
-    <form action="/editar-produto" method="POST">
+    <form action="/editar-produto/{{ $produto-> id}}" method="POST">
      @csrf 
     <label for="lblNome">Nome:</label>
     <input type="text" name="nome" value="{{ $produto->nome }}">
