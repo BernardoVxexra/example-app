@@ -17,7 +17,7 @@ Route::post('/cadastrar-produto', function(Request $request){
        'nome' => $request->nome,
        'telefone' => $request->telefone,
        'origem' => $request->origem,
-       'observacao' => $request->observacao
+       'observacao' => $request->observacao,
     ]);
 
     echo "Cadastro feito com sucesso:";
@@ -40,7 +40,7 @@ Route::post('/editar-produto/{id}',function (Request $request, $id){
      'nome' => $request->nome,
      'telefone' =>$request->telefone,
      'origem' =>$request->origem,
-     'observacao' =>$request->observacao
+     'observacao' =>$request->observacao,
    ]);
 
    echo "Contato editado com sucesso";

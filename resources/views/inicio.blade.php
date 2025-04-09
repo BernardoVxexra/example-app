@@ -41,8 +41,8 @@
         </select>
       </div>
       <div class="mb-3">
-        <label for="observacoes" class="form-label">Observações</label>
-        <textarea class="form-control" id="observacoes" name="observacoes" rows="3"
+        <label for="observacao" class="form-label">Observações</label>
+        <textarea class="form-control" id="observacao" name="observacao" rows="3"
           placeholder="Digite suas observações" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
