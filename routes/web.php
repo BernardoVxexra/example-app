@@ -24,4 +24,6 @@ Route::post('/cadastrar-produto', function(Request $request){
 
 Route::get('/listar-produto/(id)', function($id){
   $produto = Produto::find($id);
+  return view('listar', ['produto' => $produto]);
+  
 });
