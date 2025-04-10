@@ -20,7 +20,7 @@ Route::post('/cadastrar-produto', function(Request $request){
        'observacao' => $request->observacao,
     ]);
 
-    echo "Cadastro feito com sucesso:";
+    return redirect('/')->with('mensagem', 'Cadastro feito com sucesso!');
 });
 
 Route::get('/listar-produto/{id}', function($id){
@@ -43,12 +43,12 @@ Route::post('/editar-produto/{id}',function (Request $request, $id){
      'observacao' =>$request->observacao,
    ]);
 
-   echo "Contato editado com sucesso";
+   return redirect('/')->with('mensagem', 'Contato editado com sucesso!');
 });
 
 Route::get('/excluir-produto/{id}', function($id){
   $produto = Produto::find($id);
   $produto->delete();
 
-  echo "Contato excluido com sucesso";
+  return redirect('/')->with('mensagem', 'Contato excluído com sucesso!');
 });

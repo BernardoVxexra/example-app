@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Contato</title>
-  <!-- Link para o CSS do Bootstrap -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Link para o CSS do Bootstrap Icons (opcional, para ícones) -->
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Link para o CSS do Bootstrap Toggle (para o switch) -->
+  <!-- Bootstrap Toggle -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap5-toggle/css/bootstrap5-toggle.min.css" rel="stylesheet">
+  <!-- SweetAlert2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
   <style>
     .form-control:disabled,
     .form-control[readonly] {
@@ -21,9 +24,9 @@
 
 <body>
 
-
   <div class="container mt-5">
     <h2>Formulário de Contato</h2>
+
     <form action="/cadastrar-produto" method="POST">
       @csrf
       <div class="mb-3">
@@ -53,8 +56,11 @@
 
   <!-- Scripts do Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Scripts do Bootstrap Toggle (para o switch) -->
+  <!-- Scripts do Bootstrap Toggle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap5-toggle/js/bootstrap5-toggle.min.js"></script>
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
     // Máscara para o campo de telefone
     document.getElementById('telefone').addEventListener('input', function (e) {
@@ -66,6 +72,18 @@
       }
     });
   </script>
+
+  @if (session('mensagem'))
+    <script>
+      Swal.fire({
+        icon: 'success',
+        title: 'Sucesso!',
+        text: "{{ session('mensagem') }}",
+        confirmButtonColor: '#3085d6'
+      });
+    </script>
+  @endif
+
 </body>
 
 </html>
